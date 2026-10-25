@@ -1,3 +1,4 @@
+
 package uk.ac.westminster.products_api;
 
 import org.springframework.stereotype.Service;
@@ -33,7 +34,7 @@ public class ProductService {
 
     public List<Product> findByName(String name) {
         return products.stream()
-                .filter(p -> p.getName().contains(name))
+                .filter(product -> product.getName().contains(name))
                 .toList();
     }
 }
